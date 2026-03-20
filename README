@@ -2,65 +2,30 @@
 
 ## Overview
 
-In this project I built a small system to measure and display light intensity in real time.
+Small project to measure and display light intensity in real time using an RP2040 and an OPT4048 sensor.
 
-The setup uses a RP2040 microcontroller together with an OPT4048 sensor.
-The data is sent to a Python desktop application where it is displayed using a simple GUI.
-
-The goal was mainly to learn how embedded systems and desktop applications can work together.
-
----
+The microcontroller sends the data to a Python (PyQt6) desktop app where it is shown in a simple GUI.
 
 ## Technologies
 
-* Adafruit Feather RP2040
-* OPT4048 light sensor
+* RP2040 (Feather)
+* OPT4048
 * C / Arduino
 * Python (PyQt6)
 
----
-
 ## Features
 
-* Reads light sensor data
-* Sends data from the microcontroller to the PC
-* Displays values in real time in a GUI
-* Simple structure, easy to extend
-
----
-
-## How it works
-
-The microcontroller reads the sensor values and sends them over serial.
-The Python application receives the data and updates the UI continuously.
-
----
+* Reads sensor data
+* Sends data via serial
+* Displays values in real time
 
 ## Setup
 
-### Embedded
-
-* Upload the code to the RP2040
-* Connect the sensor
-
-### Desktop App
-
 ```bash
 pip install pyqt6
-python main.py
+python opt4048_gui.py
 ```
-
----
 
 ## Notes
 
-This is a learning project where I focused on combining embedded programming with a simple desktop interface.
-
----
-
-## Possible improvements
-
-* Add graphs instead of plain values
-* Save data to file
-* Improve UI design
-* Add more sensors
+Built to learn embedded systems and basic GUI development.
